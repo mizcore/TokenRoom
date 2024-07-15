@@ -9,7 +9,7 @@ chatGPTに9割作らせました。
 - web上で記事が作れるようにする
 - スニペットとして既存のCMSに組み込めるようにする
 
-##使い方 説明
+## 使い方 説明
 ①
 ![image](https://github.com/user-attachments/assets/a557a084-859b-463a-8e0c-c9081f6a1ddc)
 一番最初の階層のindex.htmlの21行目
