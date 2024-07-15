@@ -1,9 +1,3 @@
-SetEnvIf Referer "^https://サイトアドレス" mysite
-Order Deny,Allow
-Deny from all
-Allow from env=mysite
-
-
 RewriteEngine on
 ewriteCond %{HTTP_REFERER} !^http(s)?://サイトアドレス [NC]
-RewriteRule \.(jpg|jpeg|png|gif|webp|js|css)$ - [F]
+RewriteRule \.(jpg|jpeg|png|gif|webp|js)$ - [F]
