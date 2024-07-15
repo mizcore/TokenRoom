@@ -29,6 +29,8 @@ contentsフォルダの中のtemplateフォルダをコピペ。名前をトー�
 中のindex.phpの22行目  
 const token = "";  
 にトークン名を入れる。  
+contetnt.htmlの中身を記事として自由に編集してください。  
+c-styles.cssが共通CSSになっているので、それもお好きなようにいじってください。  
   
 ※monacoin.chan というトークン名の場合は monacoin_chan でフォルダを作ってください。  
   
