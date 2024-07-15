@@ -2,6 +2,7 @@
 <html>
 <head>
     <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="../c-styles.css">
     <title>MPurse Login Check</title>
     <script>
         async function loginWithMPurse() {
@@ -45,7 +46,11 @@
     </script>
 </head>
 <body>
-    <div id="status">MPurseでログイン中...</div>
-    <button onclick="manualReload()">再試行</button>
+<body>
+        <div id="contents" style="text-align: center;">
+        <div id="status" style="padding: 20px;">MPurseでログイン中...</div>
+        <button onclick="manualReload()">再試行</button>
+    </div>
+    </body>
 </body>
 </html>
