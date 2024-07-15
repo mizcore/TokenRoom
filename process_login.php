@@ -68,7 +68,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
             if ($quantity >= 1) {
                 echo "<div class='image-container'><img src='$image_url' alt='$token'></div>";
                 echo "<div class='token-container-center'><h2>$name</h2><p>$token<br>$quantity / 1枚 所有済み</p>";
-                echo "<a href='contents/$url_token/index.html' target='_blank'><button>記事を読む！</button></a></div>";
+                echo "<a href='contents/$url_token/index.php' target='_blank'><button>記事を読む！</button></a></div>";
             } else {
                 echo "<div class='image-container'><img src='$image_url' alt='$token' class='grayed-out'><div class='lock-overlay'><p>未所持</p></div></div>";
                 echo "<div class='token-container-center'><h2>$name</h2><p>$token<br>$quantity / 1 未所持</p><a href='https://mona-tools.com/mona_asset_detail.php?asset_id=$token' target='_blank'><button>トークンを買う</button></a><br><span style='font-size:0.5em;color:#666;'>※買った後はしばらくしてから再度アクセスしてください。</span></div>";
