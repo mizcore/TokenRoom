@@ -1,0 +1,91 @@
+body {
+    font-family: Arial, sans-serif;
+    color: #555;
+    background-color: #f4f4f4;
+    margin:0 0 20px 0;
+}
+h2{
+    margin-bottom: -0.2em;
+}
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /*! padding: 40px; */
+    margin-bottom: 40px;
+}
+#result{
+    max-width: 900px;
+    margin: 0 auto;
+  }
+#login-container,#result p{
+    text-align: center;
+}
+#login-container button{margin-top: 20px;}
+#login-container.center{margin-top: 20px;}
+#result p{padding-bottom: 20px;}
+
+#loggedInText{
+margin-right: 20px;    
+}
+
+.token-container, #footer{
+    padding: 20px;
+    border: 1px solid #ccc;
+    background-color: #fff;
+
+}
+.token-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 20px 0;
+}
+.token-container-center{text-align: center;width: 500px;}
+
+.image-container {
+    position: relative;
+}
+
+.grayed-out {
+    opacity: 0.5;
+}
+
+.lock-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: red;
+    font-size: 24px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #bbb;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 0.2em;
+}
+
+button:hover {
+    background-color: #aaa;
+}
+#header{
+    color: #eee;
+    background-color: #bbb;
+    text-align: center;
+    padding: 20px 0;
+    margin-bottom: 20px;
+    font-size: 1.5em;
+    font-weight: bold;
+    max-width: 900px;
+  margin: auto;
+}
+
+#footer{
+    display: block;
+    max-width: 600px;
+    margin: auto;
+}
