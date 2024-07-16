@@ -18,13 +18,14 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
             $data = json_decode($response, true);
             $quantity = isset($data['quantity']) ? floatval($data['quantity']) : 0;
             $description = json_decode($data['description'], true);
-            $name = isset($description['monacard']['name']) ? $description['monacard']['name'] : "Not found";
-            $cid = isset($description['monacard']['cid']) ? $description['monacard']['cid'] : "Not found";
+            $name = isset($description['monacard']['name']) ? $description['monacard']['name'] : "$token";
+            $cid = isset($description['monacard']['cid']) ? $description['monacard']['cid'] : "nocard";
             $image_url = "https://mcspare.nachatdayo.com/image_server/img/{$cid}m";
 
             if ($quantity >= 1) {
                 if (file_exists('content.html')) {
                     include 'content.html';
+                    echo "<div id='footer'><a href='../../index.html'>とーくんるーむに戻る</a></div>";
                 } else {
                     echo "<p>content.htmlファイルが見つかりません。</p>";
                 }
@@ -36,6 +37,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
                         [$image_url, $token, $quantity, $name],
                         $reject_html
                     );
+                    echo "<div id='footer'><a href='../../index.html'>とーくんるーむに戻る</a></div>";
                 } else {
                     echo "<p>reject.htmlファイルが見つかりません。</p>";
                 }
