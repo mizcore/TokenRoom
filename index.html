@@ -13,12 +13,12 @@
                 checkTokens(address);
             } catch (error) {
                 console.error('Error:', error);
-                document.getElementById('result').innerHTML = "<p>ログインに失敗しました。再試行してください。</p>";
+                document.getElementById('result').innerHTML = "<p>ログインに失敗しました。再読み込みしてください。</p>";
             }
         }
 
         function checkTokens(address) {
-            const tokens = ["MONA", ""]; // ここに記事を作りたいトークン名を入れる
+            const tokens = ["MONAKOJIKI.r182021", "SUNAKO.202407"]; // 記事を作りたいトークンの名前を入れる
             const request = new XMLHttpRequest();
             request.open('POST', 'process_login.php', true);
             request.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
@@ -29,6 +29,7 @@
                         document.getElementById('loginButton').style.display = "none";
                         document.getElementById('loggedInText').style.display = "inline";
                         document.getElementById('loggedInText').innerHTML = `ログイン済み: ${address}`;
+                        document.getElementById('footer').style.display = "none";
                         document.getElementById('logoutButton').style.display = "inline";
                         document.getElementById('login-container').classList.remove('center');
                     } else {
@@ -56,11 +57,9 @@
         <span id="loggedInText" style="display: none;"></span>
         <button id="logoutButton" style="display: none;" onclick="logout()">ログアウト</button>
     </div>
+
     <div id="result"></div>
-    <form id="loginForm" action="process_login.php" method="post" style="display: none;">
-        <input type="hidden" id="address" name="address">
-    </form>
-    <div id="footer">
+    <div id="footer" style="display:block;">
         Mpurseでログインして該当の所持トークンがあれば記事を読めるページです。<br>
         このシステムはchatGPTを用いて作られました。
         <h2>Mpurseってなあに？</h2>
@@ -70,6 +69,14 @@
         <a href="https://blog.n-ista.org/2019/06/mpursegoogle-chromefirefox.html" target="_blank">
             Mpurseのウォレット（口座）開設方法(秘密結社にすたブログ )
         </a>
+        <h2>入手先</h2>
+            <a href="https://chromewebstore.google.com/detail/mpurse/ljkohnccmlcpleonoiabgfggnhpkihaa" target="_blank">Chrome拡張機能版</a>
+            <a href="https://addons.mozilla.org/ja/firefox/addon/mpchain_mpurse/" target="_blank">Firefox拡張機能版</a>
+            <a href="https://apps.apple.com/jp/app/mpurse/id1494156643" target="_blank">iOSアプリ版</a>
+            <a href="https://play.google.com/store/apps/details?id=info.mpchain.mpurse&hl=ja" target="_blank">Androidアプリ版</a>
     </div>
+    <form id="loginForm" action="process_login.php" method="post" style="display: none;">
+        <input type="hidden" id="address" name="address">
+    </form>
 </body>
 </html>
