@@ -51,10 +51,15 @@ img.center {
 button, .button {
   padding: 10px 20px;
   background-color: #bbb;
-  color: white;
+  color: #fff;
   border: none;
   cursor: pointer;
   border-radius: 0.2em;
+}
+
+button:hover {
+color:#fff;
+  background-color: #aaa;
 }
 
 #footer {
